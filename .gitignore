@@ -6,3 +6,6 @@ node_modules
 # Only apps should have lockfiles
 yarn.lock
 package-lock.json
+
+#my local file for random stuff
+copy-play.js
