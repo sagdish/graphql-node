@@ -3,32 +3,18 @@ const { prisma } = require('./generated/prisma-client');
 
 const Query = require('./resolvers/Query')
 const Mutation = require('./resolvers/Mutation')
+const Subscription = require('./resolvers/Subscription')
 const User = require('./resolvers/User')
 const Link = require('./resolvers/Link')
-
-// this will not be needed once prisma is connected:
-// let links = [{
-//   id: 'link-0',
-//   url: 'www.howtographql.com',
-//   description: 'Fullstack tutorial for graphql'
-// },
-// {
-//   id: 'link-1',
-//   url: 'www.sagdi.com',
-//   description: 'my personal website'
-// }];
-//
-// let idCount = links.length
-
-// const mapper = (arr, id) => {
-//   return arr.findIndex((el) => el.id === id)
-// }
+const Vote = require('./resolvers/Vote')
 
 const resolvers = {
   Query,
   Mutation,
+  Subscription,
   User,
-  Link
+  Link,
+  Vote,
 }
 
 const server = new GraphQLServer({

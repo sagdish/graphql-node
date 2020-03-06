@@ -1,5 +1,6 @@
-async function feed(parent, args, context, info) {
-  return await context.prisma.links()
+ async function feed(parent, args, context, info) {
+  const links = await context.prisma.links()
+  return links
 }
 
 module.export = {
