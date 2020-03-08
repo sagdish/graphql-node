@@ -24,16 +24,16 @@ type Link {
   votes: [Vote!]!
 }
 
-type AuthPayload {
-  token: String
-  user: User
-}
-
 type User {
   id: ID!
   name: String!
   email: String!
   links: [Link!]!
+}
+
+type AuthPayload {
+  token: String
+  user: User
 }
 
 type Vote {
